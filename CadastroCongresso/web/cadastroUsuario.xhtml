@@ -72,7 +72,7 @@
                                 <h:outputText value="Nome:"/> 
                             </td>
                             <td>
-                                <h:inputText value="#{userBean.nome}" required="true"
+                                <h:inputText value="#{userBean.nome}" required="true" maxlength="255"
                                              requiredMessage="O campo nome é obrigatório.">
                                 </h:inputText>
                                 
@@ -83,7 +83,7 @@
                                 <h:outputText value="CPF:"/>
                             </td>
                             <td>
-                                <h:inputText value="#{userBean.CPF}" 
+                                <h:inputText value="#{userBean.CPF}" maxlength="11"
                                              required="true" requiredMessage="O campo CPF é obrigatório">
                                     <f:validator binding="#{userBean.CPFValidator}"/>
                                 </h:inputText>
@@ -94,7 +94,7 @@
                                 <h:outputText value="RG:"/>
                             </td>
                             <td>
-                                <h:inputText value="#{userBean.RG}" required="true" 
+                                <h:inputText value="#{userBean.RG}" required="true" maxlength="10"
                                              requiredMessage="O campo RG é obrigatório"/>
                             </td>
                         </tr>
@@ -114,7 +114,7 @@
                                 <h:outputText value="Rua:"/>
                             </td>
                             <td>
-                                <h:inputText value="#{userBean.rua}" required="true"
+                                <h:inputText value="#{userBean.rua}" required="true" maxlength="255"
                                              requiredMessage="O campo Rua é obrigatório"/>
                             </td>
                         </tr>
@@ -123,7 +123,7 @@
                                 <h:outputText value="Número:"/>
                             </td>
                             <td>
-                                <h:inputText value="#{userBean.numero}" required="true"
+                                <h:inputText value="#{userBean.numero}" required="true" maxlength="6"
                                              requiredMessage="O campo Numero é obrigatório"/>
                             </td>
                         </tr>
@@ -132,7 +132,7 @@
                                 <h:outputText value="Complemento"/>
                             </td>
                             <td>
-                                <h:inputText value="#{userBean.complemento}" />
+                                <h:inputText value="#{userBean.complemento}" maxlength="255"/>
                             </td>
                         </tr>
                         <tr>
@@ -158,7 +158,7 @@
                                  <h:outputText value="CEP:"/>
                             </td>
                             <td>
-                                <h:inputText value="#{userBean.CEP}" required="true" maxlength="9" mask="99999-999"
+                                <h:inputText value="#{userBean.CEP}" required="true" maxlength="9"
                                              requiredMessage="O campo CEP é obrigatório" converter="#{userBean.cepConverter}">
                                     
                                 </h:inputText>
@@ -181,7 +181,7 @@
                                 <h:outputText value="Telefone Fixo:"/>
                             </td>
                             <td>
-                                <h:inputText value="#{userBean.telFixo}" required="true"
+                                <h:inputText value="#{userBean.telFixo}" required="true" maxlength="10"
                                              requiredMessage="O campo Telefone é obrigatório"/>
                             </td>
                         </tr>
@@ -190,7 +190,7 @@
                                 <h:outputText value="Telefone Celular:"/>
                             </td>
                             <td>
-                                <h:inputText value="#{userBean.telCelular}" />
+                                <h:inputText value="#{userBean.telCelular}" maxlength="10"/>
                             </td>
                         </tr>                            
                         <tr>
