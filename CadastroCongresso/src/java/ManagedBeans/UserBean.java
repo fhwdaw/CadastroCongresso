@@ -21,7 +21,7 @@ public class UserBean {
     private String CPF;
     private String RG;
     private String rua;
-    private int numero;
+    private Integer numero;
     private String complemento;
     private String cidade;         
     private String estado;
@@ -126,14 +126,14 @@ public class UserBean {
     /**
      * @return the numero
      */
-    public int getNumero() {
+    public Integer getNumero() {
         return numero;
     }
 
     /**
      * @param numero the numero to set
      */
-    public void setNumero(int numero) {
+    public void setNumero(Integer numero) {
         this.numero = numero;
     }
 
