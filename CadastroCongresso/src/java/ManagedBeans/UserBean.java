@@ -4,8 +4,10 @@
  */
 package ManagedBeans;
 
+import converter.CEPConverter;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import validator.CPFValidator;
 
 /**
  *
@@ -20,12 +22,44 @@ public class UserBean {
     private String RG;
     private String rua;
     private int numero;
+    private String complemento;
     private String cidade;         
     private String estado;
     private String CEP;
     private String telFixo;
     private String telCelular;
     private String email;
+    
+    private CPFValidator CPFValidator = new CPFValidator();
+    private CEPConverter cepConverter = new CEPConverter();
+
+    public CEPConverter getCepConverter() {
+        return cepConverter;
+    }
+
+    public void setCepConverter(CEPConverter cepConverter) {
+        this.cepConverter = cepConverter;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
+    }
+    
+    
+
+    public CPFValidator getCPFValidator() {
+        return CPFValidator;
+    }
+
+    public void setCPFValidator(CPFValidator CPFValidator) {
+        this.CPFValidator = CPFValidator;
+    }
+    
+    
     
     /**
      * Creates a new instance of UserBean
